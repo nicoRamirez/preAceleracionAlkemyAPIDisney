@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "1f40714b-642f-485d-8109-1a8d6576388b",
+		"name": "disney",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "guardar ironman",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\":\"https://static.wikia.nocookie.net/marvelcinematicuniverse/images/a/ab/Iron_Man_Mark_LXXXV.png/revision/latest/scale-to-width-down/244?cb=20190405192851&path-prefix=es\",\r\n    \"nombre\":\"ironMan\",\r\n    \"edad\":\"34\",\r\n    \"peso\":\"76\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/characters/guardar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "devuelve todos los personajes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/characters",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters"
+					]
+				},
+				"description": "devuelve todos los personajes con solamente nombre y imagen"
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar personaje",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/characters/eliminar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters",
+						"eliminar",
+						"1"
+					]
+				},
+				"description": "elimina al personaje con id 1"
+			},
+			"response": []
+		},
+		{
+			"name": "guardar pelicula",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\":\"https://es.web.img3.acsta.net/c_310_420/pictures/17/06/19/14/01/130456.jpg\",\r\n    \"titulo\":\"spider man welcome home\",\r\n    \"fechaDeCreacion\":\"2017-06-28\",\r\n    \"calificacion\":\"3\",\r\n    \"personajes\":[\r\n        {\r\n            \r\n             \"imagen\":\"https://es.web.img3.acsta.net/c_310_420/pictures/17/06/19/14/01/130456.jpg\",\r\n            \"nombre\":\"spiderman\",\r\n            \"edad\":\"14\",\r\n            \"peso\":\"76\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/movie/guardar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movie",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificar personaje",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"id\": 2,\r\n            \"imagen\": \"https://es.web.img3.acsta.net/c_310_420/pictures/17/06/19/14/01/130456.jpg\",\r\n            \"nombre\": \"spiderman\",\r\n            \"edad\": 14,\r\n            \"peso\": 76.0,\r\n            \"historia\": null,\r\n            \"peliculas\": [\r\n                {\r\n                    \"id\":1\r\n                }\r\n            ]\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/characters/modificar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters",
+						"modificar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "devuelve todas las peliculas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/movie",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar otra pelicula",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\":\"https://static.wikia.nocookie.net/marvelcinematicuniverse/images/b/bf/Iron_Man_1_Portada.png/revision/latest/scale-to-width-down/337?cb=20191029194450&path-prefix=es\",\r\n    \"titulo\":\"ironman 1\",\r\n    \"fechaDeCreacion\":\"2008-03-30\",\r\n    \"calificacion\":\"5\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/movie/guardar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movie",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar pelicula",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/movie/eliminar/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movie",
+						"eliminar",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifica la pelicula por id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":4,\r\n    \"imagen\":\"https://static.wikia.nocookie.net/marvelcinematicuniverse/images/b/bf/Iron_Man_1_Portada.png/revision/latest/scale-to-width-down/337?cb=20191029194450&path-prefix=es\",\r\n    \"titulo\":\"ironman 1\",\r\n    \"fechaDeCreacion\":\"2008-03-30\",\r\n    \"calificacion\":\"5\",\r\n    \"personajes\":[\r\n        {\r\n            \"id\":1,\r\n            \"imagen\":\"https://static.wikia.nocookie.net/marvelcinematicuniverse/images/a/ab/Iron_Man_Mark_LXXXV.png/revision/latest/scale-to-width-down/244?cb=20190405192851&path-prefix=es\",\r\n    \"nombre\":\"ironMan\",\r\n    \"edad\":\"34\",\r\n    \"peso\":\"76\"\r\n        }\r\n    ]\r\n\r\n   \r\n    \r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/movie//modificar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movie",
+						"",
+						"modificar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar personaje por nombre y edad",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/characters/character?name=ironman&edad=34",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"characters",
+						"character"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ironman"
+						},
+						{
+							"key": "edad",
+							"value": "34"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar pelicula por nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/movie/movies?name=spider man welcome home",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movie",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "spider man welcome home"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
